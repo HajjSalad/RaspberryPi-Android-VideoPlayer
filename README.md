@@ -50,7 +50,8 @@ The Android app can remotely control live video streaming from the Raspberry Pi 
 🔁 How It Works  
 &nbsp;&nbsp;&nbsp;⎔ **Start Streaming**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Tapping `Start Live Stream` in the app sends a `GET /start-live-stream` request to the Pi.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The Python HTTP server running on the Pi receives this trigger and launches an `FFmpeg` process using `subprocess.Popen()` to begin live streaming via HLS.    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The Python HTTP server running on the Pi receives this trigger and launches an `FFmpeg` process  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;using `subprocess.Popen()` to begin live streaming via HLS.    
 &nbsp;&nbsp;&nbsp;⎔ **View Live Stream**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Tapping `View Live Stream` opens an `ExoPlayer` instance within the app to play the HLS stream.     
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ⚠️ Note: There is a known startup delay in the stream. If playback is attempted immediately, it crashes the Exoplayer.      
