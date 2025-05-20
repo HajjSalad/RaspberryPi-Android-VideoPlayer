@@ -25,7 +25,8 @@ The Android app allows remote control of video recording on the Raspberry Pi via
 &nbsp;&nbsp;&nbsp;⎔ **Start Recording**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tapping the "Start Recording Video" button sends a `GET /start-capture` HTTP request to the Pi.     
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The Python HTTPServer on the Pi listens for this trigger.   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Upon receiving the request, it runs the video capture executable using: `subprocess.Popen(["./main"])`, which starts capturing video using the connected USB webcam via the V4L2 API.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Upon receiving the request, it runs the video capture executable using: `subprocess.Popen(["./main"])`.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• This starts capturing video using the connected USB webcam via the V4L2 API.   
 &nbsp;&nbsp;&nbsp;⎔ **Stop Recording**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pressing "Stop Recording Video" sends a GET /stop-capture request.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The server intercepts this signal and gracefully stops the ongoing video recording process.  
