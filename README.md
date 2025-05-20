@@ -23,7 +23,7 @@ This system empowers users with:
 ---
 
 ### 3. 🎥 Capture Video using USB webcam
-The Android app allows remote control of video recording on the Raspberry Pi via HTTP triggers.   
+The Android app allows remote control of video recording on the Raspberry Pi via HTTP triggers. It provides a simple interface to start and stop video capture from a USB webcam connected to the Pi.  
 
 &nbsp;&nbsp;&nbsp;⎔ **Start Recording**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tapping the `Start Recording Video` button sends a `GET /start-capture` HTTP request to the Pi.     
@@ -32,7 +32,16 @@ The Android app allows remote control of video recording on the Raspberry Pi via
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• This starts capturing video using the connected USB webcam via the V4L2 API.   
 &nbsp;&nbsp;&nbsp;⎔ **Stop Recording**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pressing `Stop Recording Video` sends a `GET /stop-capture` request.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The server intercepts this signal and gracefully stops the ongoing video recording process.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The server intercepts this signal and gracefully stops the ongoing video recording process.     
+
+📁 **Current Outputs**   
+&nbsp;&nbsp;&nbsp;&nbsp;• Each captured frame is saved as a raw `.yuyv` file.   
+&nbsp;&nbsp;&nbsp;&nbsp;• Files are named sequentially: `frame_0.yuyv`, `frame_1.yuyv`, and so on.  
+
+🚧 **Future Enhancement**
+&nbsp;&nbsp;&nbsp;&nbsp;• The `.yuyv` frames will be automatically converted to a compressed `.mp4` video using FFmpeg.  
+&nbsp;&nbsp;&nbsp;&nbsp;• The resulting `.mp4` file will be timestamped and named accordingly.
+&nbsp;&nbsp;&nbsp;&nbsp;• The server will return the final filename back to the Android app in the HTTP response.
 
 **Folder Structure**  
 ```
