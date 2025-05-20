@@ -29,26 +29,16 @@ The Android app allows remote control of video recording on the Raspberry Pi via
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• This starts capturing video using the connected USB webcam via the V4L2 API.   
 &nbsp;&nbsp;&nbsp;⎔ **Stop Recording**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pressing "Stop Recording Video" sends a GET /stop-capture request.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The server intercepts this signal and gracefully stops the ongoing video recording process.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The server intercepts this signal and gracefully stops the ongoing video recording process.   
 
-
-
-
-Pressing 'Start Recording Video' button on app sends `/start-capture` trigger on HTTP to Pi.    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• HTTPServer listening to the port receives `/start-capture` trigger  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Runs subprocess.Popen([./main"]) to start capturing the video using the webcam
-&nbsp;&nbsp;&nbsp;⎔ Clicking 'Stop Recording Video' button sends `/stop-capture` trigger on HTTP to Pi.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• HTTPServer listening to the port receives `/stop-capture` trigger  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Stops capturing the video
-
-**Folder Structure**
+**Folder Structure**  
 ```
 pi-video-capture/
-├── main.c                   # V4L2 video capture program
-├── main                     # Compiled ready to be run by pyhton script
-├── Makefile                 # Build System config
-├── trigger_server.py        # 
-└── captured_frames/         # Store saved .mp4 files
+├── main.c                   # V4L2-based video capture source code
+├── main                     # Compiled binary executed by the server
+├── Makefile                 # Build configuration for compiling main.c
+├── trigger_server.py        # Lightweight HTTP server for start/stop triggers
+└── captured_frames/         # Output directory for captured frames
 ```
 
 #### 4. Stream Live Feed from Pi
