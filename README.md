@@ -65,6 +65,10 @@ pi-live-stream/
 └── trigger_server.py        # Python HTTP server to handle streaming triggers
 ```
 
+---
+
 #### 5. Stream Recorded Video from Pi
+
+---
 
 
