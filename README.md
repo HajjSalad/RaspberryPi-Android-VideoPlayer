@@ -20,6 +20,8 @@ This system empowers users with:
 #### 2. ▶️ Stream from Local (Phone Storage)
 &nbsp;&nbsp;&nbsp;• Stream video files saved locally on Android phone thougha user-friendly interface.  
 
+---
+
 #### 3. 🎥 Capture Video using USB webcam
 The Android app allows remote control of video recording on the Raspberry Pi via HTTP triggers.   
 &nbsp;&nbsp;&nbsp;⎔ **Start Recording**   
