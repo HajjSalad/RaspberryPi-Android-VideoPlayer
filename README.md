@@ -21,10 +21,19 @@ This system empowers users with:
 &nbsp;&nbsp;&nbsp;• Stream video files saved locally on Android phone thougha user-friendly interface.  
 
 #### 3. 🎥 Capture Video using USB webcam
-The Android app allows remote control of video recording on the Raspberry Pi via HTTP triggers.  
-&nbsp;&nbsp;&nbsp;⎔ **Start Recording**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tapping the "Start Recording Video" button sends a GET /start-capture HTTP request to the Pi.  
-&nbsp;&nbsp;&nbsp;&nbsp;Pressing 'Start Recording Video' button on app sends `/start-capture` trigger on HTTP to Pi.    
+The Android app allows remote control of video recording on the Raspberry Pi via HTTP triggers.   
+&nbsp;&nbsp;&nbsp;⎔ **Start Recording**   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tapping the "Start Recording Video" button sends a `GET /start-capture` HTTP request to the Pi.     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The Python HTTPServer on the Pi listens for this trigger.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Upon receiving the request, it runs the video capture executable using: `subprocess.Popen(["./main"])`, which starts capturing video using the connected USB webcam via the V4L2 API.  
+&nbsp;&nbsp;&nbsp;⎔ **Stop Recording**   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pressing "Stop Recording Video" sends a GET /stop-capture request.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The server intercepts this signal and gracefully stops the ongoing video recording process.  
+
+
+
+
+Pressing 'Start Recording Video' button on app sends `/start-capture` trigger on HTTP to Pi.    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• HTTPServer listening to the port receives `/start-capture` trigger  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Runs subprocess.Popen([./main"]) to start capturing the video using the webcam
 &nbsp;&nbsp;&nbsp;⎔ Clicking 'Stop Recording Video' button sends `/stop-capture` trigger on HTTP to Pi.
