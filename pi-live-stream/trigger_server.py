@@ -10,8 +10,8 @@ FFMPEG_CMD = [
     "-video_size", "640x480",
     "-i", "/dev/video0",
     "-c:v", "libx264",
-    "-profile:v", "baseline",   # Use 'baseline' or 'main' for compatibility
-    "-level", "3.1",            # Level 3.1 is widely supported
+    "-profile:v", "baseline",  
+    "-level", "3.1",            
     "-preset", "ultrafast",
     "-f", "hls",
     "-hls_time", "2",
@@ -21,7 +21,7 @@ FFMPEG_CMD = [
 ]
 
 class RequestHandler(BaseHTTPRequestHandler):
-    ffmpeg_process = None  # Store ffmpeg process here
+    ffmpeg_process = None  # Store ffmpeg process
 
     def do_GET(self):
         if self.path == '/start-stream':
@@ -29,7 +29,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
 
-            # If ffmpeg already running, ignore or restart (your choice)
+            # If ffmpeg already running, ignore
             if RequestHandler.ffmpeg_process is None or RequestHandler.ffmpeg_process.poll() is not None:
                 # Start FFmpeg in a separate thread so server keeps running
                 def run_ffmpeg():
@@ -43,6 +43,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             else:
                 self.wfile.write(b"Live stream already running.\n")
 
+        # Stop stream trigger
         elif self.path == '/stop-stream':
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')
