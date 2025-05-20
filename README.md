@@ -24,6 +24,7 @@ This system empowers users with:
 
 ### 3. 🎥 Capture Video using USB webcam
 The Android app allows remote control of video recording on the Raspberry Pi via HTTP triggers.   
+
 &nbsp;&nbsp;&nbsp;⎔ **Start Recording**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tapping the `Start Recording Video` button sends a `GET /start-capture` HTTP request to the Pi.     
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The Python HTTPServer on the Pi listens for this trigger.   
