@@ -55,12 +55,12 @@ The Android app can remotely control live video streaming from the Raspberry Pi 
 &nbsp;&nbsp;&nbsp;⎔ **View Live Stream**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Tapping `View Live Stream` opens an `ExoPlayer` instance within the app to play the HLS stream.     
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ⚠️ Note: There is a known startup delay in the stream. If playback is attempted immediately, it crashes   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the Exoplayer.      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the Exoplayer.      
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Future versions will eliminate the separate "View Live Stream" button in favor of auto-play once the  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stream is confirmed active.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stream is confirmed active.   
 &nbsp;&nbsp;&nbsp;⎔ **Stop Streaming**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tapping `Stop Live Stream` sends a `GET /stop-live-stream` request to the Pi.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The server intercepts this request and terminates the FFmpeg process, ending the stream cleanly.    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Tapping `Stop Live Stream` sends a `GET /stop-live-stream` request to the Pi.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The server intercepts this request and terminates the FFmpeg process, ending the stream cleanly.    
 
 **Folder Structure**  
 ```
