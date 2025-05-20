@@ -10,8 +10,8 @@ This system empowers users with:
 
 ## 🔧 Features
 ### 🏠 Main Page
-&nbsp;&nbsp;&nbsp;• Centralized navigation hub
-&nbsp;&nbsp;&nbsp;• Quick access to all major functionalities: Stream from Internet etc.
+&nbsp;&nbsp;&nbsp;• Centralized navigation hub  
+&nbsp;&nbsp;&nbsp;• Quick access to all major functionalities: Stream from Internet etc.  
 
 ### 1. 📡 Stream from Internet
 &nbsp;&nbsp;&nbsp;• Watch internet-hosted video streams directly from the Android app using ExoPlayer.   
