@@ -22,7 +22,7 @@ This system empowers users with:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏗️ **Future Enhancement**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Host a JSON file (e.g., on GitHub Pages) containing video metadata.    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• App fetches and parses this JSON to load videos dynamically — enabling easy updates without modifying the app code.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• App fetches and parses this JSON to load videos dynamically - enabling easy updates.   
 
 
 
