@@ -1,7 +1,14 @@
 ## 📹 RaspberryPi-Android-VideoPlayer
-A multi-functional project that connects a Raspberry Pi and an Android App for flexible video input/output capabilities. This system enables local and live video streaming between the Pi and Android, webcam capture via V4L2, and playback from various sources.
+A versatile project that bridges a Raspberry Pi and an Android app to enable seamless video capture, playback, and streaming across devices.   
 
-### 🔧 Features
+### 🚀 Project Overview
+This system empowers users with:  
+- 🎬 Android App for intuitive video playback  
+- 🌐 Streaming from Internet and local device storage  
+- 🎥 Video Capture via USB Webcam using V4L2 on the Raspberry Pi  
+- 📡 Live Video Streaming from the Pi to the Android device over the network  
+
+## 🔧 Features
 ### Main Page
 &nbsp;&nbsp;&nbsp;• Provide links and navigation that lead to all the features.  
 
