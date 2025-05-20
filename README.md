@@ -38,10 +38,10 @@ The Android app allows remote control of video recording on the Raspberry Pi via
 &nbsp;&nbsp;&nbsp;&nbsp;• Each captured frame is saved as a raw `.yuyv` file.   
 &nbsp;&nbsp;&nbsp;&nbsp;• Files are named sequentially: `frame_0.yuyv`, `frame_1.yuyv`, and so on.  
 
-🚧 **Future Enhancement**
-&nbsp;&nbsp;&nbsp;&nbsp;• The `.yuyv` frames will be automatically converted to a compressed `.mp4` video using FFmpeg.  
-&nbsp;&nbsp;&nbsp;&nbsp;• The resulting `.mp4` file will be timestamped and named accordingly.
-&nbsp;&nbsp;&nbsp;&nbsp;• The server will return the final filename back to the Android app in the HTTP response.
+🚧 **Future Enhancement**   
+&nbsp;&nbsp;&nbsp;&nbsp;• The `.yuyv` frames will be automatically converted to a compressed `.mp4` video using FFmpeg.    
+&nbsp;&nbsp;&nbsp;&nbsp;• The resulting `.mp4` file will be timestamped and named accordingly.   
+&nbsp;&nbsp;&nbsp;&nbsp;• The server will return the final filename back to the Android app in the HTTP response.   
 
 **Folder Structure**  
 ```
