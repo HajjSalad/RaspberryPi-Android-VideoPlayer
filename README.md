@@ -9,8 +9,9 @@ This system empowers users with:
 - 📡 Live Video Streaming from the Pi to the Android device over the network  
 
 ## 🔧 Features
-### Main Page
-&nbsp;&nbsp;&nbsp;• Provide links and navigation that lead to all the features.  
+### 🏠 Main Page
+&nbsp;&nbsp;&nbsp;• Centralized navigation hub
+&nbsp;&nbsp;&nbsp;• Quick access to all major functionalities: Stream from Internet etc.
 
 ### 1. 📡 Stream from Internet
 &nbsp;&nbsp;&nbsp;• Watch internet-hosted video streams directly from the Android app using ExoPlayer.   
