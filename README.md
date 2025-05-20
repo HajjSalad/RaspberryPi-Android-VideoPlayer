@@ -17,12 +17,12 @@ This system empowers users with:
 ### 1. 📡 Stream from Internet    
 &nbsp;&nbsp;&nbsp;• Watch internet-hosted video streams directly from the Android app using ExoPlayer.   
 
-📁 **Cureent Implementation**    
-&nbsp;&nbsp;&nbsp;• Video URLs are hardcoded in the app and tied to each button. Not scalable for future changes.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📁 **Cureent Implementation**    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Video URLs are hardcoded in the app and tied to each button. Not scalable for future changes.   
 
-🏗️ **Future Enhancement**  
-&nbsp;&nbsp;&nbsp;• Host a JSON file (e.g., on GitHub Pages) containing video metadata.    
-&nbsp;&nbsp;&nbsp;• App fetches and parses this JSON to load videos dynamically — enabling easy updates without modifying the app code.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🏗️ **Future Enhancement**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Host a JSON file (e.g., on GitHub Pages) containing video metadata.    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• App fetches and parses this JSON to load videos dynamically — enabling easy updates without modifying the app code.   
 
 
 
