@@ -77,7 +77,32 @@ pi-live-stream/
 
 ### Android Folder Structure
 ```
-
+android-app/
+├── app/                      # Base application module
+│   ├── AndroidManifest.xml   # App manifest
+│   ├── java/
+│   │   └── com/example/raspberryplayer/
+│   │       ├── MainPageActivity.java           # Home screen with navigation buttons
+│   │       ├── StreamInternetActivity.java     # Plays video from a URL
+│   │       ├── StreamLocalActivity.java        # Plays video from device storage
+│   │       ├── CaptureVideoActivity.java       # Sends HTTP commands to record video via Pi
+│   │       ├── LiveFeedPiActivity.java         # Triggers live stream start/stop
+│   │       ├── ExoPlayerActivity.java          # Displays live stream using ExoPlayer
+│   │       └── StreamVideoPiActivity.java      # Streams recorded videos hosted by the Pi
+│   └── res/
+│       ├── layout/
+│       │   ├── activity_main_page.xml
+│       │   ├── activity_stream_internet.xml
+│       │   ├── activity_stream_local.xml
+│       │   ├── activity_capture_video.xml
+│       │   ├── activity_live_feed_pi.xml
+│       │   ├── activity_exo_player.xml
+│       │   └── activity_stream_video_pi.xml
+│       ├── drawable/                           # Icons, backgrounds, etc.
+│       └── values/
+│           ├── strings.xml                     # UI text content
+│           ├── colors.xml
+│           └── themes.xml
 ```
 
 ---
