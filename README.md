@@ -17,12 +17,12 @@ This system empowers users with:
 ### 1. 📡 Stream from Internet
 &nbsp;&nbsp;&nbsp;• Watch internet-hosted video streams directly from the Android app using ExoPlayer.   
 
-#### 2. ▶️ Stream from Local (Phone Storage)
+### 2. ▶️ Stream from Local (Phone Storage)
 &nbsp;&nbsp;&nbsp;• Stream video files saved locally on Android phone thougha user-friendly interface.  
 
 ---
 
-#### 3. 🎥 Capture Video using USB webcam
+### 3. 🎥 Capture Video using USB webcam
 The Android app allows remote control of video recording on the Raspberry Pi via HTTP triggers.   
 &nbsp;&nbsp;&nbsp;⎔ **Start Recording**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tapping the `Start Recording Video` button sends a `GET /start-capture` HTTP request to the Pi.     
@@ -45,7 +45,7 @@ pi-video-capture/
 
 ---
 
-#### 4. 📽️ Stream Live Feed from Pi (*Notes on* [Notion](https://hajjsalad.notion.site/4-Stream-Live-Feed-from-Pi-1f7a741b5aab80999b3ae4be82567a37))
+### 4. 📽️ Stream Live Feed from Pi (*Notes on* [Notion](https://hajjsalad.notion.site/4-Stream-Live-Feed-from-Pi-1f7a741b5aab80999b3ae4be82567a37))
 The Android app can remotely control live video streaming from the Raspberry Pi using HTTP commands, enabling real-time video access directly from the Pi’s USB webcam.  
 🔁 How It Works  
 &nbsp;&nbsp;&nbsp;⎔ **Start Streaming**  
@@ -70,7 +70,7 @@ pi-live-stream/
 
 ---
 
-#### 5. Stream Recorded Video from Pi
+### 5. Stream Recorded Video from Pi
 &nbsp;&nbsp;&nbsp;⎔ Coming soon....
 
 ---
