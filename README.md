@@ -10,12 +10,21 @@ This system empowers users with:
 
 ## 🔧 Features
 ### 🏠 Main Page
-&nbsp;&nbsp;&nbsp;• Centralized navigation hub  
-&nbsp;&nbsp;&nbsp;• Quick access to all major functionalities: Stream from Internet, Stream from Local etc.   
-&nbsp;&nbsp;&nbsp;• Provide direct access to the developer’s professional profiles on LinkedIn and GitHub.
-
-### 1. 📡 Stream from Internet
+&nbsp;&nbsp;&nbsp;• Centralized navigation hub.      
+&nbsp;&nbsp;&nbsp;• Quick access to all major functionalities: Stream from Internet, Stream from Local etc.    
+&nbsp;&nbsp;&nbsp;• Provide direct access to the developer’s professional profiles on LinkedIn and GitHub.  
+ 
+### 1. 📡 Stream from Internet    
 &nbsp;&nbsp;&nbsp;• Watch internet-hosted video streams directly from the Android app using ExoPlayer.   
+
+📁 **Cureent Implementation**    
+&nbsp;&nbsp;&nbsp;• Video URLs are hardcoded in the app and tied to each button. Not scalable for future changes.   
+
+🏗️ **Future Enhancement**  
+&nbsp;&nbsp;&nbsp;• Host a JSON file (e.g., on GitHub Pages) containing video metadata.    
+&nbsp;&nbsp;&nbsp;• App fetches and parses this JSON to load videos dynamically — enabling easy updates without modifying the app code.   
+
+
 
 ### 2. ▶️ Stream from Local (Phone Storage)
 &nbsp;&nbsp;&nbsp;• Stream video files saved locally on Android phone thougha user-friendly interface.  
