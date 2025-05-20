@@ -11,7 +11,8 @@ This system empowers users with:
 ## 🔧 Features
 ### 🏠 Main Page
 &nbsp;&nbsp;&nbsp;• Centralized navigation hub  
-&nbsp;&nbsp;&nbsp;• Quick access to all major functionalities: Stream from Internet, Stream from Local etc.  
+&nbsp;&nbsp;&nbsp;• Quick access to all major functionalities: Stream from Internet, Stream from Local etc. 
+&nbsp;&nbsp;&nbsp;• Provides direct access to the developer’s professional profiles on LinkedIn and GitHub.
 
 ### 1. 📡 Stream from Internet
 &nbsp;&nbsp;&nbsp;• Watch internet-hosted video streams directly from the Android app using ExoPlayer.   
@@ -20,19 +21,24 @@ This system empowers users with:
 &nbsp;&nbsp;&nbsp;• Stream video files saved locally on Android phone thougha user-friendly interface.  
 
 #### 3. 🎥 Capture Video using USB webcam
-Capture video from USB webcam using V4L2 in C, encode it to H.264 and save it to .`mp4`    
-Step 1: Build a lightweight user-space video capture service for Pi using V4L2 API.   
-  - Uses existing UVC (USB Video Class) driver in Linux for standard webcams.
-  - Kernel provides driver (UVC module) that exposes `/dev/video0`
-Step 2:
+The Android app allows remote control of video recording on the Raspberry Pi via HTTP triggers.  
+&nbsp;&nbsp;&nbsp;⎔ ⏯️ **Start Recording**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tapping the "Start Recording Video" button sends a GET /start-capture HTTP request to the Pi.  
+&nbsp;&nbsp;&nbsp;&nbsp;Pressing 'Start Recording Video' button on app sends `/start-capture` trigger on HTTP to Pi.    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• HTTPServer listening to the port receives `/start-capture` trigger  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Runs subprocess.Popen([./main"]) to start capturing the video using the webcam
+&nbsp;&nbsp;&nbsp;⎔ Clicking 'Stop Recording Video' button sends `/stop-capture` trigger on HTTP to Pi.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• HTTPServer listening to the port receives `/stop-capture` trigger  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Stops capturing the video
 
-Folder Structure
+**Folder Structure**
 ```
 pi-video-capture/
-├── main.c               # V4L2 video capture program
-├── Makefile             # Build System config
-├── captured_frames/     # Store raw video frames
-└── recordings/          # Store saved .mp4 files
+├── main.c                   # V4L2 video capture program
+├── main                     # Compiled ready to be run by pyhton script
+├── Makefile                 # Build System config
+├── trigger_server.py        # 
+└── captured_frames/         # Store saved .mp4 files
 ```
 
 #### 4. Stream Live Feed from Pi
