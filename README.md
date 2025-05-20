@@ -127,4 +127,5 @@ android-app/
 ---
 
 ### Demo
-![Demo](./vid_demo.gif)
+
+|![Demo](./1.gif)|![Demo](./2.gif)|![Demo](./3.gif)|
