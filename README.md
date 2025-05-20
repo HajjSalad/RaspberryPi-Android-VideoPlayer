@@ -42,7 +42,9 @@ pi-video-capture/
 ├── trigger_server.py        # Lightweight HTTP server for start/stop triggers
 └── captured_frames/         # Output directory for captured frames
 ```
+
 ---
+
 #### 4. 📽️ Stream Live Feed from Pi
 The Android app can remotely control live video streaming from the Raspberry Pi using HTTP commands, enabling real-time video access directly from the Pi’s USB webcam.  
 🔁 How It Works  
