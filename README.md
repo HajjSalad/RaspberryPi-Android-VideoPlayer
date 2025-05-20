@@ -45,7 +45,7 @@ pi-video-capture/
 
 ---
 
-#### 4. 📽️ Stream Live Feed from Pi
+#### 4. 📽️ Stream Live Feed from Pi (Notes on [Notion](https://hajjsalad.notion.site/4-Stream-Live-Feed-from-Pi-1f7a741b5aab80999b3ae4be82567a37))
 The Android app can remotely control live video streaming from the Raspberry Pi using HTTP commands, enabling real-time video access directly from the Pi’s USB webcam.  
 🔁 How It Works  
 &nbsp;&nbsp;&nbsp;⎔ **Start Streaming**  
